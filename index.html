@@ -17,27 +17,52 @@
     ></script>
   </head>
   <body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <h2 class="text-light px-5">Expanse tracker</h2>
+    </nav>
     <div class="container">
-      <h1 class="">Expanse tracker</h1>
-      <form id="input-form" type="submit">
-        <label for="amount"> Amount</label>
-        <input type="number" id="amount" name="amount" required />
-        <label for="discription"> Discription</label>
-        <input type="text" id="description" name="discription" required />
-        <label for="category">category</label>
-        <select name="category" id="category" required>
+      <div></div>
+      <form id="input-form" type="submit" class="w-25">
+        <label for="amount" class="form-label"> Amount</label>
+        <div class="input-group">
+          <div class="input-group-text">₹</div>
+          <input
+            type="number"
+            id="amount"
+            name="amount"
+            class="form-control"
+            required
+          />
+        </div>
+        <label for="discription" class="form-label"> Discription</label>
+        <input
+          type="text"
+          id="description"
+          name="discription"
+          class="form-control"
+          required
+        />
+        <label for="category" class="form-label">category</label>
+        <select name="category" id="category" class="form-control" required>
+          <option value="">--Please choose an option--</option>
           <option value="food & bevrage">food & bevrage</option>
           <option value="clothes">clothes</option>
           <option value="transport">transport</option>
           <option value="relaxing">relaxing</option>
         </select>
-        <label for="date">date</label>
-        <input type="date" id="date" name="date" required />
-        <input type="submit" value="submit" />
+        <label for="date" class="form-label">date</label>
+        <input
+          type="date"
+          id="date"
+          name="date"
+          class="form-control"
+          required
+        />
+        <input type="submit" value="submit" class="btn btn-primary" />
       </form>
-      <div>
+      <div class="border border-dark border-3 rounded-3 m-5 p-5">
         <h2>Expanse List</h2>
-        <table id="table">
+        <table id="table" class="table table-striped">
           <thead>
             <tr>
               <th>Amount</th>
@@ -47,13 +72,11 @@
               <th>Operations</th>
             </tr>
           </thead>
-          <tbody id="expanse-list"></tbody>
+          <tbody id="expanse-list" class=""></tbody>
           <tfoot>
             <tr>
               <td>Total</td>
               <td id="total"></td>
-              <td></td>
-              <td></td>
             </tr>
           </tfoot>
         </table>

@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (savedexpenses) {
       expenses = savedexpenses;
       expenses.forEach((expense) => addExpenseToTable(expense));
-      updateTotal();
+      updateTotalExpenses();
     }
   }
 
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
              <td>${expense.description}</td>
              <td>${expense.category}</td>
              <td>${expense.date}</td>
-             <td><button class="edit-btn">Edit</button> <button class="delete-btn">Delete</button></td>`;
+             <td><button class="edit-btn btn btn-info">Edit</button> <button class="delete-btn btn btn-danger">Delete</button></td>`;
   }
 
   function addexpense(amount, description, category, date) {
